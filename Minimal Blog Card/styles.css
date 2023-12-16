@@ -9,7 +9,7 @@
 html,
 body {
     height: 100%;
-    font-size: "Sora";
+    font-family: "Sora", sans-serif;
     display: flex;
     justify-items: center;
     align-items: center;
@@ -18,11 +18,58 @@ body {
 }
 
 .wrapper {
+    width: 368px;
     background-color: #FFFFFF;
     padding: 16px;
     border-radius: 20px;
+    box-shadow: 0px 0px 50px 10px #E5EAF0;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
 }
 
 .card__img {
-    width: 50px;
+    width: 336px;
+    height: 152px;
+}
+
+.card__span {
+    color: #883AE1;
+    background: #E6D6FC;
+    margin-top: 16px;
+    width: fit-content;
+    border-radius: 50px;
+    font-size: 10px;
+    padding: 2px 16px;
+    font-weight: 600;
+}
+
+.card__title {
+    margin-top: 16px;
+    font-size: 18px;
+    margin-bottom: 6px;
+    color: #20293A;
+}
+
+.card__text {
+    font-size: 14px;
+    color: #6C727F;
+}
+
+.card__tag {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #6C727F;
+    padding: 10px 0 0 0;
+}
+
+.line {
+    width: 368px;
+    height: 1px;
+    background: #E5EAF0;
+    position: relative;
+    top: -30px;
+    left: -15px;
 }
