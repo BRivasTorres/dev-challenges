@@ -18,18 +18,26 @@ body {
 
 .wrapper {
     width: 640px;
-    border: 2px solid green;
+    border-radius: 15px;
+    background: white;
 }
 
+.main {
+    border: 3px solid #F2F5F9;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 2px solid #F2F5F9;
+}
 
 .main__text{
     width: 90%;
     margin: 0 auto;
-    border: 2px solid red;
 }
 
 .main__img{
     width: 100%;
+    border-radius: 15px 15px 0 0;
 }
 .main__h2 {
     font-size: 1.5rem;
@@ -40,14 +48,22 @@ body {
 .main__p {
     font-size: 1rem;
     color: #677489;
+    margin: 1rem 0;
 }
 
 .footer {
     width: 90%;
-    margin: 0 auto;
+    margin: 1rem auto;
     display: flex;
+    gap: 1.5rem;
 }
 
 .footer__img {
     width: 10%;
+    border-radius: 50%;
+    border: 7px solid #F2F5F9;
+}
+
+.footer__span {
+    color: #677489;
 }
