@@ -1,6 +1,19 @@
-# Challenges carried out to practice and improve in front-end technologies, taking as a guide the challenges proposed by https://github.com/devchallenges-io
-<h2>🛠️ Technologies used: JavaScript, HMTL, CSS. </h2>
-<h2>🛠️ Tools used: TyniPNG.</h2>
-<h2>
-<strong> Website of the challenges </strong> : https://devchallenges.io/dashboard
-</h2>
+
+# Dev Challenges
+
+Challenges carried out to practice and improve in front-end technologies, taking as a guide the challenges proposed by https://github.com/devchallenges-io
+
+
+## Tech Stack
+
+**JavaScript** , **HTML** , **CSS**
+
+
+
+## Proyects overview
+<h3>Minimal Blog Card</h3>
+<a href="https://minimal-blog-card-bt.netlify.app/"><img src="https://i.ibb.co/PDHP7Zs/dev1.png" alt="dev1" border="0"></a>
+<h3>Bussines blog card</h3>
+<a href="https://bussines-blog-card-dev2.netlify.app/"><img src="https://i.ibb.co/6ZWghwL/dev2.png" alt="dev2" border="0"></a>
+<h3>Testimonial Page</h3>
+<a href="https://testimonial-page-bt.netlify.app/"><img src="https://i.ibb.co/v4zcwXR/dev3.png" alt="dev3" border="0"></a>
