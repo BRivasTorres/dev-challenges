@@ -78,7 +78,7 @@ html {
     margin-bottom: 5px;
 }
 
-.aside__label > input{
+.aside__label > input {
     border: 2px solid red;
 }
 
@@ -101,4 +101,22 @@ html {
     border-radius: 20px;
     border: none;
     outline: transparent;
+}
+
+
+@media screen and (max-width: 1040px) {
+    .wrapper__text {
+        width: 40%;
+        font-size: 1.5rem;
+    }
+    .text__p {
+        font-size: 1.3rem;
+    }
+    .wrapper__form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form__aside>*:not(label) {
+        margin-bottom: .5rem;
+    }
 }
