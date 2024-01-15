@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Contact Page</title>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="./imgs/contact-form-icon.svg" alt="contact img" class="wrapper__contact">
+        
+        <div class="wrapper__text">
+            <h1 class="text__h1">Interested in our business pricing?</h1>
+            <p class="text__p">Fill out the form to view details and we’ll contact you as soon as possible.</p>
+        </div>
+        
+        <form action="" class="wrapper__form">
+            <aside class="form__aside">
+                <label for="name" class="aside__label">Name</label>
+                <input type="text" id="name" name="name" placeholder="Ethan Johnson">
+            </aside>
+            
+            <aside class="form__aside">
+                <label for="company-email" class="aside__label">company emeail</label>
+                <input type="text" id="company-email" name="company-email" placeholder="ethan@johnson.com">
+            </aside>
+            
+            <aside class="form__aside">
+                <label for="company-size" class="aside__label">company size</label>
+                <select name="compony-size" id="company-size" name="company-size" class="aside__select" >
+                    <option value="employees">50-100 employees</option>
+                </select>
+            </aside>            
+            
+            <aside class="form__aside">
+                <label for="subject" class="aside__label">Subject</label>
+                <select name="subject" id="subject" name="subject" class="aside__select">
+                    <option value="subject">Building Landing Pages</option>
+                </select>
+            </aside>
+            
+            <aside class="form__aside form__text-area">
+                <label for="message" class="aside__label">message</label>
+                <textarea name="message" id="message">50-100 employees</textarea>
+            </aside>
+            <button class="form__btn">Contact Sales</button>
+        </form>
+    </div>
+</body>
+</html>
