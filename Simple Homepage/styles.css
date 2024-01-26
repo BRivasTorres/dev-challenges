@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body, 
+html {
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+    display: 100%;
+    height: 100%; 
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #F2F9FE;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem;
+    padding-top: 1.25rem;
+}
+
+.header__nav {
+    display: flex;
+    gap:2rem;
+    font-size: 1.125rem;
+}
+
+.header__nav > li > a {
+    color: #909193;
+    font-weight: 600;
+}
+
+.header__nav>li>a:hover, 
+.header__nav>li>a:active {
+    color: #111729;    
+    cursor: pointer;
+}
+
+.header__theme {
+    background-color: #223344;
+    border-radius: 100px;
+    padding: 3px;
+}
+
+.header__theme > button {
+    border: none;
+    outline: transparent;
+    color: #F2F9FE;
+    font-size: 8px;
+}
+
+.header__theme>button {
+    cursor: pointer;
+}
+
+.theme__night {
+    background-color: transparent;
+    padding: 5px;
+}
+
+.theme__sun {
+    background-color: #F2F9FE;
+    border-radius: 100%;
+    padding: 5px;
+}
+
+.main {
+    margin: 4rem 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+}
+
+.main__img > img{
+    width: 100%;
+}
+
+.content__h3 {
+    text-transform: uppercase;
+    color: #223344;
+}
+
+.content__h2 {
+    margin: 2rem 0;
+    font-size:3.75rem;
+    color: #223344;
+    font-weight: 600;
+    line-height: 80px;
+}
+
+.content__p {
+    color: #909193;
+}
+
+.content__btns {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin: 1.5rem 0;
+}
+
+.content__btns>button {
+    padding: 1rem 1.5rem;
+    border: none;
+    outline: transparent;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.content__btns>button:hover
+.content__btns>button:active {
+    cursor: pointer;
+}
+
+.content__btns>button:first-child {
+    background-color: #2A4DD0;
+    text-transform: uppercase;
+    color: #F2F9FE;
+}
+
+.content__btns>button:last-child {
+    color: #2A4DD0;
+    background-color: transparent;
+    text-decoration-line: underline;
+}
+
+.content__tasks {
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    display: flex;
+    gap: 1.2rem;
+    
+}
+
+.content__tasks>small {
+    display: flex;
+    align-items: center;
+    gap: .3rem;
+    color: #909193;
+}
