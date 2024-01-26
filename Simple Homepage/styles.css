@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap');
 
+:root {
+    --light-background: #F2F9FE;
+    --light-color : #FFFFFF;
+    --darck-background: #223344;
+    --darck-color : #111729;
+}
+
 *, *::after, *::before {
     margin: 0;
     padding: 0;
@@ -15,12 +22,18 @@ html {
     font-family: "Poppins", sans-serif;
 }
 
+body.dark-mode .wrapper {
+    background-color: var(--darck-background);
+    color: var(--light-color);
+}
+
 .wrapper {
     display: 100%;
     height: 100%; 
     max-width: 1200px;
     margin: 0 auto;
-    background-color: #F2F9FE;
+    background-color: var(--light-background);
+    color: var(--darck-color);
 }
 
 .header {
@@ -44,8 +57,8 @@ html {
 
 .header__nav>li>a:hover, 
 .header__nav>li>a:active {
-    color: #111729;    
     cursor: pointer;
+    color: var(--darck-color);
 }
 
 .header__theme {
@@ -57,11 +70,11 @@ html {
 .header__theme > button {
     border: none;
     outline: transparent;
-    color: #F2F9FE;
+    color: var(--light-background);
     font-size: 8px;
 }
 
-.header__theme>button {
+.header__theme>button:hover {
     cursor: pointer;
 }
 
@@ -71,7 +84,7 @@ html {
 }
 
 .theme__sun {
-    background-color: #F2F9FE;
+    background-color: var(--light-background);
     border-radius: 100%;
     padding: 5px;
 }
@@ -88,13 +101,12 @@ html {
 
 .content__h3 {
     text-transform: uppercase;
-    color: #223344;
 }
 
 .content__h2 {
     margin: 2rem 0;
     font-size:3.75rem;
-    color: #223344;
+    color: var(--darck-color);
     font-weight: 600;
     line-height: 80px;
 }
@@ -127,7 +139,7 @@ html {
 .content__btns>button:first-child {
     background-color: #2A4DD0;
     text-transform: uppercase;
-    color: #F2F9FE;
+    color: var(--light-background);
 }
 
 .content__btns>button:last-child {
