@@ -45,6 +45,7 @@ body.dark-mode .wrapper {
 }
 
 .modal__close{
+    display: none;
     position: absolute;
     top: 0;
     right: 0;
