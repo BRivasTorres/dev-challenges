@@ -15,7 +15,7 @@
     text-decoration: none;
 }
 
-body, 
+body,
 html {
     width: 100%;
     min-height: 100vh;
@@ -29,7 +29,7 @@ body.dark-mode .wrapper {
 
 .wrapper {
     display: 100%;
-    height: 100%; 
+    height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     background-color: var(--light-background);
@@ -44,6 +44,63 @@ body.dark-mode .wrapper {
     padding-top: 1.25rem;
 }
 
+.modal__close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #FFFFFF;
+    width: 60%;
+    height: 100vh;
+}
+
+.modal__open {
+    display: none;
+}
+
+.open__btn {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+}
+
+.close__btn {
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+    font-size: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    position: relative;
+    right: -350px;
+}
+
+.open__btn:hover,
+.close__btn:hover {
+    cursor: pointer;
+}
+
+.close__ul {
+    font-size: 3rem;
+    gap: 4rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.4rem;
+}
+
+.close__theme {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.close__ul>li>a {
+    color: var(--darck-color);
+}
+
 .header__nav {
     display: flex;
     gap:2rem;
@@ -55,19 +112,22 @@ body.dark-mode .wrapper {
     font-weight: 600;
 }
 
-.header__nav>li>a:hover, 
+.header__nav>li>a:hover,
 .header__nav>li>a:active {
     cursor: pointer;
     color: var(--darck-color);
 }
 
-.header__theme {
+.header__theme,
+.close__theme {
     background-color: #223344;
     border-radius: 100px;
     padding: 3px;
+    max-width: fit-content;
 }
 
-.header__theme > button {
+.header__theme > button,
+.close__theme > button {
     border: none;
     outline: transparent;
     color: var(--light-background);
@@ -78,12 +138,14 @@ body.dark-mode .wrapper {
     cursor: pointer;
 }
 
-.theme__night {
+.theme__night,
+.close__night {
     background-color: transparent;
     padding: 5px;
 }
 
-.theme__sun {
+.theme__sun,
+.close__sun {
     background-color: var(--light-background);
     border-radius: 100%;
     padding: 5px;
@@ -153,7 +215,7 @@ body.dark-mode .wrapper {
     margin-bottom: 5rem;
     display: flex;
     gap: 1.2rem;
-    
+
 }
 
 .content__tasks>small {
@@ -161,4 +223,29 @@ body.dark-mode .wrapper {
     align-items: center;
     gap: .3rem;
     color: #909193;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .main__img {
+        width: 60%;
+        margin: 0 auto 6rem auto;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .header__nav,
+    .header__theme {
+        display: none;
+    }
+
+    .modal__open {
+        display: block;
+    }
 }
