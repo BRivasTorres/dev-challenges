@@ -11,15 +11,24 @@
         <img src="./imgs/blur-radial.svg" alt="blur-radial" class="wrapper__blur-top">
         <img src="./imgs/blur-radial.svg" alt="blur-radial" class="wrapper__blur-bottom">
         <div class="main">
-            <form action="" class="main__form">
+            <form action="" class="main__form" id="form-step1">
                 <h2 class="form__h2">Register</h2>
                 <label for="name" id="name" class="form__label">Name</label>
                 <input type="text" placeholder="enter your name" required class="form__input">
                 <label for="email" class="form__label">Email</label>
                 <input type="email" placeholder="example@emial.com" required class="form__input">
-                <button type="submit" class="form__submit">continue</button>
+                <button type="submit" class="form__submit" id="submit-step1">continue</button>
+            </form>
+            <form action="" class="main__form step2" id="form-step2">
+                <h2 class="form__h2">Register</h2>
+                <label for="name" id="name" class="form__label">Name</label>
+                <input type="text" placeholder="enter your name" required class="form__input">
+                <label for="email" class="form__label">Email</label>
+                <input type="email" placeholder="example@emial.com" required class="form__input">
+                <button type="submit" class="form__submit" id="submit-step1">continue</button>
             </form>
         </div>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>
