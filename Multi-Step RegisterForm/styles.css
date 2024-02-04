@@ -109,3 +109,37 @@ body {
 .main__form.step2 {
     display: none;
 }
+
+.footer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 230px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 300px;
+}
+
+.footer__h2 {
+    color: #4D5562;
+    font-size: 1.2rem;
+}
+
+.footer__circles {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: #394050;
+}
+
+.circle.active {
+    border: 5px solid #342D63;
+    background-color: #723EE3;
+}
