@@ -21,10 +21,11 @@
                 
                 <button type="submit" class="form__submit" id="submit-step1">continue</button>
             </form>
-            <form action="" class="main__form step2" id="form-step2">
+            
+            <form action="" class="main__form step2 form--desactive" id="form-step2">
                 <h2 class="form__h2">Register</h2>
                 <label for="name" id="name" class="form__label">Name</label>
-                <input pattern="[a-zA-Z]" title="Must be a valid name, only letters" type="text" placeholder="enter your name" required class="form__input input__name">
+                <input pattern="^[a-zA-Z]+" title="Must be a valid name, only letters" type="text" placeholder="enter your name" required class="form__input input__name">
                 
                 <label for="email" class="form__label">Email</label>
                 <input  title="Must be a valid email address" type="email" placeholder="example@emial.com" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$" required class="form__input input__email">

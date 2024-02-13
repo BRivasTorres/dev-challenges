@@ -23,9 +23,10 @@ function validInputs(idx) {
     if(currentInputName === "" || currentInputEmail === "") {
         alert("Please complete the fileds")
     } else {
-        forms[idx].classList.add("concluded")
+        forms[idx].classList.add("form--concluded")
+        forms[idx+1].classList.remove("form--desactive")
         currentStepCircle[idx+1].classList.add("active")
         currentStepText.innerHTML = idx +2        
-        // forms[idx + 1].style.display = "block"
+        forms[idx + 1].style.display = "block"
     }
 }
