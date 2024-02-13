@@ -139,7 +139,7 @@ body {
     background-color: #394050;
 }
 
-.circle.active {
+.active {
     border: 5px solid #342D63;
     background-color: #723EE3;
 }
