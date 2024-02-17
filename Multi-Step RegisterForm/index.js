@@ -12,43 +12,70 @@ const currentStepCircle = document.querySelectorAll(".circle");
 const currentStepText = document.querySelector(".footer__step");
 const btnStep2 = document.querySelector("#submit-step2");
 
-const summaryName = document.querySelector(".summary__name")
-const summaryEmail = document.querySelector(".summary__email")
+let emailValue = ""
+let nameValue = ""
 
-let topicSelected = "";
-let currForm = 1
+emailInput.addEventListener("input", (e) => emailValue = e.target.value)
+nameInput.addEventListener("input", (e) => nameValue = e.target.value)
 
 forms.forEach((form, formIdx) => {
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
-        formIdx < 2 ? updateCurrentForm(formIdx) : ""
+		formIdx < 2 ? updateCurrentForm(formIdx) : ""
 	});
 });
 
 topics.forEach((topic, topicIdx) => {
     topic.addEventListener("click", () => {
-        topicSelected = topic.innerHTML
-        topics.forEach((item, i) => {
-            item.classList.toggle("active-topic", i === topicIdx)
-        })
+        topics[topicIdx].classList.toggle("active-topic");
     })
 })
 
 function updateCurrentForm(idx) {
-	if (idx === 1) {
+	let isValid = true
+
+	if(idx === 1) {
 		printSummary();
+		isValid = validateSecondForm()
 	}
-	currForm++;
-	forms[idx].classList.add("form--concluded");
-	forms[idx + 1].classList.remove("form--desactive");
-	currentStepCircle[idx + 1].classList.add("active");
-	currentStepText.innerHTML = currForm;
-	forms[idx + 1].style.display = "block";
+	
+	if(isValid) {
+		forms[idx].classList.add("form--concluded");
+		forms[idx + 1].classList.remove("form--desactive");
+		currentStepCircle[idx+1].classList.add("active");
+		updateFooterForm(idx)
+	}
 }
-//TODO resolver conflicto para renderizar los datos obtenidos en los formularios en sus etiquetas correspondientes
+
+function updateFooterForm(idx) {
+	console.log(idx)
+	let currForm = idx + 1;
+	currentStepText.innerHTML = currForm;
+	currForm++	
+}
 
 function printSummary() {
-    summaryName.innerHTML = "fdafdafadfda"
-    summaryEmail.innerHTML = emailInput.innerHTML
-    console.log(summaryEmail, summaryName, emailInput.textContent)
+	updateFooterForm()
+	const summaryName = document.querySelector(".summary__name");
+	const summaryEmail = document.querySelector(".summary__email");
+	const topics = document.querySelectorAll(".active-topic")
+	const topicsWrapper = document.querySelector(".summary__topics");
+		
+    summaryName.innerHTML = nameValue
+    summaryEmail.innerHTML = emailValue
+	
+	topics.forEach(item => {	
+		const li = document.createElement("li")
+		li.innerHTML = item.innerHTML
+		topicsWrapper.appendChild(li)
+	})
+}
+
+function validateSecondForm() {
+	const topicsSelected = document.querySelectorAll(".active-topic");
+	if (topicsSelected.length <= 0) {
+		alert("Please select at least one topit");
+		return false;
+	} 
+	return true
 }
