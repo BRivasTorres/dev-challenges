@@ -1,16 +1,7 @@
 const forms = document.querySelectorAll(".main__form");
 const nameInput = document.querySelector(".input__name");
 const emailInput = document.querySelector(".input__email");
-
-const btnStep1 = document.querySelector("#submit-step1");
-const form1 = document.querySelector("#form-step1");
-
-const form2 = document.querySelector(".form__step2");
 const topics = document.querySelectorAll(".step2__topic")
-
-const currentStepCircle = document.querySelectorAll(".circle");
-const currentStepText = document.querySelector(".footer__step");
-const btnStep2 = document.querySelector("#submit-step2");
 
 let emailValue = ""
 let nameValue = ""
@@ -18,10 +9,10 @@ let nameValue = ""
 emailInput.addEventListener("input", (e) => emailValue = e.target.value)
 nameInput.addEventListener("input", (e) => nameValue = e.target.value)
 
-forms.forEach((form, formIdx) => {
+forms.forEach((form, formIdx) => {	
 	form.addEventListener("submit", (e) => {
 		e.preventDefault();
-		formIdx < 2 ? updateCurrentForm(formIdx) : ""
+		formIdx < 2 ? updateCurrentForm(formIdx) : finishForms()
 	});
 });
 
@@ -42,20 +33,19 @@ function updateCurrentForm(idx) {
 	if(isValid) {
 		forms[idx].classList.add("form--concluded");
 		forms[idx + 1].classList.remove("form--desactive");
-		currentStepCircle[idx+1].classList.add("active");
 		updateFooterForm(idx)
 	}
 }
 
 function updateFooterForm(idx) {
-	console.log(idx)
-	let currForm = idx + 1;
-	currentStepText.innerHTML = currForm;
-	currForm++	
+	const currentStepCircle = document.querySelectorAll(".circle");
+	const currentStepText = document.querySelector(".footer__step");
+	
+	currentStepCircle[idx + 1].classList.add("active");
+	currentStepText.innerHTML = idx + 2;
 }
 
 function printSummary() {
-	updateFooterForm()
 	const summaryName = document.querySelector(".summary__name");
 	const summaryEmail = document.querySelector(".summary__email");
 	const topics = document.querySelectorAll(".active-topic")
@@ -78,4 +68,18 @@ function validateSecondForm() {
 		return false;
 	} 
 	return true
+}
+
+function finishForms() {
+	const wrapper = document.querySelector(".wrapper")
+	const main = document.querySelector(".main")
+	const footer = document.querySelector(".footer")
+	main.style.display = "none"
+	footer.style.display = "none"
+	
+	const finishMessage = document.createElement("h2")
+	finishMessage.classList.add("wrapper__finish--message")
+	finishMessage.innerHTML = "We have collected your information, thanks for your time"
+	wrapper.appendChild(finishMessage)
+	alert("✅Success");
 }
