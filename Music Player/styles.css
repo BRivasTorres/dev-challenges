@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Protest+Revolution&family=Protest+Riot&display=swap');
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    max-width: 1280px;
+    min-height: 100vh;
+    background: url("./imgs/bg.jpg") no-repeat;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4D5562;
+    font-family: "Montserrat", sans-serif;
+}
+
+.main {
+    width: 30%;
+    background-color: #262135;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem 0;
+}
+
+.main__song {
+    text-align: center;
+    line-height: 30px;
+}
+.song__img {
+    width: 100%;
+    border-radius: 20px;
+}
+.song__name {
+    color: #E5E7EB;
+    text-transform: capitalize;
+}
+.song__author {
+    text-transform: capitalize;
+}
+
+.main__player {
+    width: 100%;
+}
+
+.player__time {
+    display: flex;
+    justify-content: space-between;
+}
+
+.player__range {
+    margin-top: .5rem;
+    width: 100%;
+    background-color: #E5E7EB;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.player__range,
+.player__range::-webkit-slider-thumb,
+.player__range::-webkit-slider-runnable-track {
+    -webkit-appearance: none;
+}
+
+.player__range::-webkit-slider-runnable-track {
+    position: relative;
+    width: 100%;
+    height: 15px;
+    background-color: #C93B76;
+}
+
+.main__buttons > button {
+    cursor: pointer;
+    border: transparent;
+    outline: transparent;
+    background-color: transparent;
+    color: #4D5562;
+    font-size: 1.6rem;
+    margin-inline: 1rem;
+}
+
+.button__play {
+    display: none;
+}
+
+.button__play > i,
+.button__pause > i {
+    background-color: #C93B76;
+    color: #E5E7EB;
+    padding: 1.3rem;
+    border-radius: 50%;
+}
